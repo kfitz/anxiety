@@ -35,46 +35,44 @@ Template Name: Welcome
 
 
 	<?php
-	
-	// if we've elected to show the title...
+
+	// default to hidden
+	$cp_title_visibility = ' style="display: none;"';
+
+	// override if we've elected to show the title...
 	if ( commentpress_get_post_title_visibility( get_the_ID() ) ) {
-
-	?><h2 class="post_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-	
-	<?php
-	
+		$cp_title_visibility = '';
 	}
-	
+
 	?>
+	<h2 class="post_title"<?php echo $cp_title_visibility; ?>><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
 
 
 	<?php
-	
-	// if we've elected to show the meta...
+
+	// default to hidden
+	$cp_meta_visibility = ' style="display: none;"';
+
+	// overrideif we've elected to show the meta...
 	if ( commentpress_get_post_meta_visibility( get_the_ID() ) ) {
-
-	?>
-	<div class="search_meta">
-		
-		<?php commentpress_echo_post_meta(); ?>
-		
-	</div>
-	<?php
-	
+		$cp_meta_visibility = '';
 	}
 
 	?>
-	
-	
-	
+	<div class="search_meta"<?php echo $cp_meta_visibility; ?>>
+		<?php commentpress_echo_post_meta(); ?>
+	</div>
+
+
+
 	<?php global $more; $more = true; the_content(''); ?>
 
 
 
 	<?php
-	
-	// NOTE: Comment permalinks are filtered if the comment is not on the first page 
+
+	// NOTE: Comment permalinks are filtered if the comment is not on the first page
 	// in a multipage post... see: commentpress_multipage_comment_link in functions.php
 	echo commentpress_multipager();
 
@@ -93,9 +91,9 @@ Template Name: Welcome
 <div class="post">
 
 	<h2 class="post_title"><?php _e( 'Page Not Found', 'commentpress-core' ); ?></h2>
-	
+
 	<p><?php _e( "Sorry, but you are looking for something that isn't here.", 'commentpress-core' ); ?></p>
-	
+
 	<?php get_search_form(); ?>
 
 </div><!-- /post -->

@@ -18,14 +18,14 @@
 
 <?php
 
-// until WordPress supports a locate_theme_file() function, use filter
-$page_navigation = apply_filters( 
+// first try to locate using WP method
+$cp_page_navigation = apply_filters(
 	'cp_template_page_navigation',
-	get_template_directory() . '/assets/templates/page_navigation.php'
+	locate_template( 'assets/templates/page_navigation.php' )
 );
 
-// always include
-include( $page_navigation );
+// load it if we find it
+if ( $cp_page_navigation != '' ) load_template( $cp_page_navigation, false );
 
 ?>
 
@@ -55,46 +55,44 @@ include( $page_navigation );
 	<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 	<h3 class="post_title"><?php _e( 'Archives', 'commentpress-core' ); ?></h3>
 	<?php } ?>
-	
+
 	<?php while (have_posts()) : the_post(); ?>
 
 		<div class="search_result">
 
 			<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanent Link to', 'commentpress-core' ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-			
+
 			<?php
-			
-			// if we've elected to show the meta...
+
+			// default to hidden
+			$cp_meta_visibility = ' style="display: none;"';
+
+			// overrideif we've elected to show the meta...
 			if ( commentpress_get_post_meta_visibility( get_the_ID() ) ) {
-		
-			?>
-			<div class="search_meta">
-				
-				<?php commentpress_echo_post_meta(); ?>
-				
-			</div>
-			<?php
-			
+				$cp_meta_visibility = '';
 			}
-		
+
 			?>
-			
+			<div class="search_meta"<?php echo $cp_meta_visibility; ?>>
+				<?php commentpress_echo_post_meta(); ?>
+			</div>
+
 			<?php the_excerpt() ?>
-		
+
 			<p class="search_meta"><?php the_tags( __( 'Tags: ', 'commentpress-core' ), ', ', '<br />' ); ?> <?php _e( 'Posted in', 'commentpress-core' ); ?> <?php the_category( ', ' ); ?> | <?php edit_post_link( __( 'Edit', 'commentpress-core' ), '', ' | ' ); ?>  <?php comments_popup_link( __( 'No Comments &#187;', 'commentpress-core' ), __( '1 Comment &#187;', 'commentpress-core' ), __( '% Comments &#187;', 'commentpress-core' ) ); ?></p>
-		
+
 		</div><!-- /archive_item -->
-	
+
 	<?php endwhile; ?>
 
 
-	
+
 <?php else : ?>
 
 	<h2 class="post_title"><?php _e( 'Not Found', 'commentpress-core' ); ?></h2>
 
 	<p><?php _e( "Sorry, but you are looking for something that isn't here.", 'commentpress-core' ); ?></p>
-	
+
 	<?php get_search_form(); ?>
 
 <?php endif; ?>
@@ -111,7 +109,7 @@ include( $page_navigation );
 <?php
 
 // include page_navigation again
-include( $page_navigation );
+if ( $cp_page_navigation != '' ) load_template( $cp_page_navigation, false );
 
 ?>
 </div><!-- /page_nav_lower -->

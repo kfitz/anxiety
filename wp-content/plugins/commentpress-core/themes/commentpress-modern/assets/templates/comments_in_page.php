@@ -36,50 +36,50 @@ NOTES
 
 
 
-	<h3 class="general_comments_header"><?php 
-	
+	<h3 class="general_comments_header"><?php
+
 	comments_number(
-		'<span>0</span> general comments', 
-		'<span>1</span> general comment', 
-		'<span>%</span> general comments' 
-	); 
-	
+		'<span>0</span> general comments',
+		'<span>1</span> general comment',
+		'<span>%</span> general comments'
+	);
+
 	?></h3>
-	
-	
-	
+
+
+
 	<?php do_action( 'commentpress_before_scrollable_comments' ); ?>
-	
-	
-	
+
+
+
 	<div class="paragraph_wrapper">
 
 		<ol class="commentlist">
-	
-		<?php 
-		
+
+		<?php
+
 		// get comments for this post in ascending order
 		$comments = get_comments( array(
 			'post_id' => $post->ID,
 			'order' => 'ASC'
 		) );
-		
+
 		wp_list_comments(
-		
+
 			array(
-			
+
 				// list comments params
-				'type'=> 'comment', 
+				'type'=> 'comment',
 				'style'=> 'ol',
 				'reply_text' => 'Reply to this comment',
 				'callback' => 'commentpress_comments'
-				
+
 			),
-			
+
 			$comments
-			
+
 		); ?>
-	
+
 		</ol>
 
 	</div><!-- /paragraph_wrapper -->
@@ -113,13 +113,13 @@ NOTES
 
 <?php
 
-// until WordPress supports a locate_theme_file() function, use filter
-$include = apply_filters( 
+// first try to locate using WP method
+$cp_comment_form = apply_filters(
 	'cp_template_comment_form',
-	get_template_directory() . '/assets/templates/comment_form.php'
+	locate_template( 'assets/templates/comment_form.php' )
 );
 
-// include comment form
-include( $include );
+// load it if we find it
+if ( $cp_comment_form != '' ) load_template( $cp_comment_form );
 
 ?>

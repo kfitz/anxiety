@@ -24,11 +24,10 @@
 <!-- pingbacks -->
 <link rel="pingback" href="http://www.anxietyofobsolescence.com/xmlrpc.php" />
 
-<!--[if IE 6]>
+<!--[if IE]>
 <script type='text/javascript'>
 /* <![CDATA[ */
-// set this before wp_head()
-var cp_msie6 = 1;
+var cp_msie = 1;
 /* ]]> */
 </script>
 <![endif]-->
@@ -40,32 +39,53 @@ var cp_msie6 = 1;
 <!-- wp_head -->
 <link rel="alternate" type="application/rss+xml" title="The Anxiety of Obsolescence &raquo; Feed" href="http://www.anxietyofobsolescence.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="The Anxiety of Obsolescence &raquo; Comments Feed" href="http://www.anxietyofobsolescence.com/comments/feed/" />
-<link rel='stylesheet' id='cp_jquery_ui_base-css'  href='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/commentpress-core/assets/css/jquery.ui.css?ver=3.6.1' type='text/css' media='all' />
-<link rel='stylesheet' id='cp_screen_css-css'  href='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/css/screen.css?ver=3.6.1' type='text/css' media='all' />
-<link rel='stylesheet' id='cp_webfont_lato_css-css'  href='http://fonts.googleapis.com/css?family=Lato%3A400%2C700%2C400italic%2C700italic&#038;ver=3.6.1' type='text/css' media='all' />
-<link rel='stylesheet' id='cp_colours_css-css'  href='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/css/colours-01.css?ver=3.6.1' type='text/css' media='all' />
-<link rel='stylesheet' id='cp_print_css-css'  href='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/css/print.css?ver=3.6.1' type='text/css' media='print' />
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.anxietyofobsolescence.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cp_jquery_ui_base-css'  href='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/commentpress-core/assets/css/jquery.ui.css?ver=3.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cp_screen_css-css'  href='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/css/screen.min.css?ver=3.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cp_webfont_lato_css-css'  href='http://fonts.googleapis.com/css?family=Lato%3A400%2C700%2C400italic%2C700italic&#038;ver=3.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cp_colours_css-css'  href='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/css/colours-01.min.css?ver=3.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://www.anxietyofobsolescence.com/wp-includes/css/dashicons.min.css?ver=4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='cp_print_css-css'  href='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/css/print.min.css?ver=3.8.2' type='text/css' media='print' />
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
 <script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 <script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/jquery.form.min.js?ver=3.37.0'></script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.2'></script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.2'></script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.2'></script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.2'></script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/commentpress-core/assets/js/jquery.commentpress.js?ver=3.6.1'></script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/commentpress-core/assets/js/jquery.scrollTo.js?ver=3.6.1'></script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/commentpress-core/assets/js/jquery.biscuit.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-includes/js/jquery/ui/tooltip.min.js?ver=1.11.4'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var CommentpressSettings = {"cp_comments_open":"n","cp_wp_adminbar":"n","cp_bp_adminbar":"n","cp_wp_adminbar_height":"28","cp_wp_adminbar_expanded":"0","cp_tinymce":"0","cp_is_mobile":"0","cp_is_touch":"0","cp_is_tablet":"0","cp_tinymce_version":"4","cp_promote_reading":"0","cp_special_page":"1","cp_cookie_path":"\/","cp_multipage_page":"0","cp_template_dir":"http:\/\/www.anxietyofobsolescence.com\/wp-content\/plugins\/commentpress-core\/themes\/commentpress-modern","cp_plugin_dir":"http:\/\/www.anxietyofobsolescence.com\/wp-content\/plugins\/commentpress-core\/commentpress-core\/","cp_toc_chapter_is_page":"1","cp_show_subpages":"1","cp_default_sidebar":"toc","cp_js_scroll_speed":"800","cp_min_page_width":"447","cp_is_signup_page":"0","cp_textblock_meta":"1"};
+var CommentpressSettings = {"cp_comments_open":"n","cp_permalink":"http:\/\/www.anxietyofobsolescence.com\/","cp_wp_adminbar":"n","cp_bp_adminbar":"n","cp_wp_adminbar_height":"28","cp_wp_adminbar_expanded":"0","cp_tinymce":"0","cp_is_mobile":"0","cp_is_touch":"0","cp_touch_testing":"0","cp_is_tablet":"0","cp_tinymce_version":"4","cp_promote_reading":"0","cp_special_page":"1","cp_cookie_path":"\/","cp_multipage_page":"0","cp_toc_chapter_is_page":"1","cp_show_subpages":"1","cp_default_sidebar":"toc","cp_js_scroll_speed":"800","cp_min_page_width":"447","cp_is_signup_page":"0","cp_textblock_meta":"1"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/js/screen.js?ver=3.6.1'></script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/js/cp_js_form.js?ver=3.6.1'></script>
-<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/js/cp_js_all_comments.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/commentpress-core/assets/js/jquery.commentpress.min.js?ver=3.8.2'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/commentpress-core/assets/js/jquery.scrollTo.js?ver=3.8.2'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/commentpress-core/assets/js/jquery.biscuit.js?ver=3.8.2'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/js/screen.min.js?ver=3.8.2'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/commentpress-core/assets/js/jquery.commentform.min.js?ver=3.8.2'></script>
+<script type='text/javascript' src='http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/js/cp_js_all_comments.js?ver=3.8.2'></script>
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.anxietyofobsolescence.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.anxietyofobsolescence.com/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.1" />
+<meta name="generator" content="WordPress 4.3" />
 <link rel='canonical' href='http://www.anxietyofobsolescence.com/' />
 <link rel='shortlink' href='http://www.anxietyofobsolescence.com/' />
 <script type="text/javascript"><!--
@@ -89,10 +109,10 @@ function addLoadEvent(func) {
   }
 }
 function wphc(){
-	var wphc_data = [1466933015,1517191941,1550949713,1533195538,1081383452,1328071188,1098223363,2196483,70835009,86692678,20501064,53662532,103995738,104258375,204529242,37148745,3522883,20241734,86693958,205118528,523295811,87220032,523820616,204857156,523424325,3658560,523427394,204723012,120249672,120836932,104382786,523885122,3463491,103471432,205119046,205052762,36364102,20501063,103931738,221626689,3719488,37142851,86694722,103472705,523616581,1228591939,1550949713,1533195538,1081383452,254329364]; 
+	var wphc_data = [289128213,473604871,438680915,490116368,102808094,159179286,119648001,1098228737,1248262214,1097269060,1197996888,1265498437,1096999232,1197800006,1264640323,1113718346,1197662532,1113651266,1080549703,1147402311,1113710915,1147269952,1181546840,1098841922,1248655685,1248328536,1132395840,1113912128,1248329304,1248321866,1499660101,1113715521,1114045272,1082061376,1499659851,1264972610,1130691416,1180760152,1130756952,258931544,438680915,490116368,102808094,1232921110]; 
 
 	for (var i=0; i<wphc_data.length; i++){
-		wphc_data[i]=wphc_data[i]^872540785;
+		wphc_data[i]=wphc_data[i]^1918225011;
 	}
 
 	var a = new Array(wphc_data.length); 
@@ -139,17 +159,14 @@ addLoadEvent(function(){var el=document.getElementById('wphc_value');if(el)el.va
 	#toc_sidebar .sidebar_minimiser ul#toc_list,
 	.sidebar_contents_wrapper,
 	#footer_inner
-	{ 
+	{
 		background-color: #ccc !important;
 	}
-	
+
 </style>
 	
 
 <!-- IE stylesheets so we can override anything -->
-<!--[if IE 6]>
-<link rel="stylesheet" type="text/css" href="http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/css/ie6.css" media="screen" />
-<![endif]-->
 <!--[if gte IE 7]>
 <link rel="stylesheet" type="text/css" href="http://www.anxietyofobsolescence.com/wp-content/plugins/commentpress-core/themes/commentpress-modern/assets/css/ie7.css" media="screen" />
 <![endif]-->
@@ -158,7 +175,7 @@ addLoadEvent(function(){var el=document.getElementById('wphc_value');if(el)el.va
 
 
 
-<body class="home page page-id-182 page-template page-template-welcome page-template-welcome-php custom-background cp_sidebar_toc not_commentable commentpress_page not-groupblog tinymce-4">
+<body class="home page page-id-182 page-template page-template-welcome page-template-welcome-php cp_sidebar_toc not_commentable commentpress_page not-groupblog tinymce-4">
 
 
 
@@ -173,22 +190,22 @@ addLoadEvent(function(){var el=document.getElementById('wphc_value');if(el)el.va
 
 
 <div id="header">
-	
+
 	
 		<div id="page_title">
 		<div id="title"><h1><a href="http://www.anxietyofobsolescence.com" title="Home">The Anxiety of Obsolescence</a></h1></div>
 		<div id="tagline">Just another WordPress site</div>
 	</div>
+
 	
-		
 </div><!-- /header -->
 
 
 
 <div id="switcher">
 	<ul>
-		<li class="navigation-item"><a class="navigation-button" href="#navigation">Navigate</a></li>			
-		<li class="content-item"><a class="content-button" href="#content">Content</a></li>			
+		<li class="navigation-item"><a class="navigation-button" href="#navigation">Navigate</a></li>
+		<li class="content-item"><a class="content-button" href="#content">Content</a></li>
 		<li class="sidebar-item"><a class="sidebar-button" href="#sidebar">Discuss</a></li>
 	</ul>
 </div>
@@ -262,7 +279,7 @@ addLoadEvent(function(){var el=document.getElementById('wphc_value');if(el)el.va
 <div id="document_nav_wrapper">
 
 
-	
+
 <ul id="nav">
 	<li><a href="http://www.anxietyofobsolescence.com/" id="btn_cover" class="css_btn" title="Title Page">Title Page</a></li><li><a href="http://www.anxietyofobsolescence.com/general-comments/" id="btn_general" class="css_btn" title="General Comments">General Comments</a></li>
 <li><a href="http://www.anxietyofobsolescence.com/all-comments/" id="btn_allcomments" class="css_btn" title="All Comments">All Comments</a></li>
@@ -278,9 +295,9 @@ addLoadEvent(function(){var el=document.getElementById('wphc_value');if(el)el.va
 
 
 </div><!-- /document_nav -->
-	
-	
-	
+
+
+
 
 </div>
 
@@ -335,7 +352,7 @@ addLoadEvent(function(){var el=document.getElementById('wphc_value');if(el)el.va
 <li class="page_item page-item-12"><a href="http://www.anxietyofobsolescence.com/index/">Index</a></li>
 <li class="page_item page-item-2"><a href="http://www.anxietyofobsolescence.com/about/">About the Author</a></li>
 </ul>
-		
+	
 </div>
 
 
@@ -401,12 +418,20 @@ addLoadEvent(function(){var el=document.getElementById('wphc_value');if(el)el.va
 
 
 			<h2 class="post_title"><a href="http://www.anxietyofobsolescence.com/">The Anxiety of Obsolescence</a></h2>
-			
 
 
-			
-	
-	
+
+				<div class="search_meta" style="display: none;">
+			<img alt='' src='http://1.gravatar.com/avatar/1226e6eb16cb263462013195f15a2018?s=32&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1226e6eb16cb263462013195f15a2018?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />
+		<cite class="fn"><a href="http://www.anxietyofobsolescence.com/author/admin/" title="Posts by admin" rel="author">admin</a></cite>
+
+		<p><a href="http://www.anxietyofobsolescence.com/">Wednesday, September 21st, 2011</a></p>
+
+				</div>
+
+		
+
+
 	<div class="epigraph"><em>&#8220;If I were a writer,&#8221; Owen said, &#8220;how I would enjoy being told the novel is dead. How liberating, to work in the margins, outside a central perception. You are the ghoul of literature. Lovely.&#8221; </em></div>
 <div class="cite">&#8211;Don DeLillo, <em>The Names</em></div>
 <p><em>The Anxiety of Obsolescence</em> explores the seemingly tenuous position of literary fiction in contemporary U.S. media culture, paying particular attention to the ways in which the novel has suggested its own demise through its representations of television and other late twentieth-century modes of communication. More important in this study, however, than the question of <em>whether</em> the novel is becoming obsolete is that of what purpose it serves to claim that it is so. The argument of <em>The Anxiety of Obsolescence</em> is constructed through readings of the work of Thomas Pynchon and Don DeLillo, as well as through a critical engagement with the cultural contexts of that fiction, including scholarly work such as media and literary theory, but also popular journalism and phenomena such as Oprah&#8217;s Book Club. Throughout, the book argues that the anxiety of obsolescence is first and foremost a writerly strategem, one that allows the novelist to create a protected space within which the novel&#8217;s survival is assured &#8212; and, not incidentally, within which the novelist&#8217;s own social privilege is extended.</p>
@@ -512,11 +537,6 @@ and <a href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?z=y&amp
 
 
 
-
-
-
-
-
 </div><!-- /comments_container -->
 
 </div><!-- /sidebar_contents_wrapper -->
@@ -549,13 +569,13 @@ and <a href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?z=y&amp
 
 
 
-<div id="footer">	
+<div id="footer">
 
 <div id="footer_inner">
 
 	<p>Website content &copy; <a href="http://www.anxietyofobsolescence.com">The Anxiety of Obsolescence</a> 2015. All rights reserved.</p>
-	
-	
+
+
 </div><!-- /footer_inner -->
 
 </div><!-- /footer -->
@@ -574,7 +594,7 @@ and <a href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?z=y&amp
 
 
 </html>
-<!-- Dynamic page generated in 1.352 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2015-01-10 18:47:54 -->
+<!-- Dynamic page generated in 0.823 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-08-21 12:31:45 -->
 
 <!-- super cache -->

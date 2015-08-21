@@ -23,51 +23,53 @@ Separated this out for inclusion in multiple files.
 
 
 <div id="book_header">
-	
+
 	<div id="titlewrap">
 		<?php
-		
+
 		// get header image
 		commentpress_get_header_image();
-		
+
 		?>
 		<div id="page_title">
 		<div id="title"><h1><a href="<?php echo home_url(); ?>" title="<?php _e( 'Home', 'commentpress-core' ); ?>"><?php bloginfo('title'); ?></a></h1></div>
 		<div id="tagline"><?php bloginfo('description'); ?></div>
 		</div>
 	</div>
-	
+
 	<div id="book_search">
 		<?php get_search_form(); ?>
 	</div><!-- /book_search -->
-	
-	<?php 
-	
-	// until WordPress supports a locate_theme_file() function, use filter
-	$include = apply_filters( 
+
+	<?php
+
+	// first try to locate using WP method
+	$cp_user_links = apply_filters(
 		'cp_template_user_links',
-		get_template_directory() . '/assets/templates/user_links.php'
+		locate_template( 'assets/templates/user_links.php' )
 	);
-	
-	include( $include );
-	
+
+	// load it if we find it
+	if ( $cp_user_links != '' ) load_template( $cp_user_links );
+
 	?>
-	
+
 </div><!-- /book_header -->
 
 
 
 <div id="header">
 
-	<?php 
-	
-	// until WordPress supports a locate_theme_file() function, use filter
-	$include = apply_filters( 
+	<?php
+
+	// first try to locate using WP method
+	$cp_navigation = apply_filters(
 		'cp_template_navigation',
-		get_template_directory() . '/assets/templates/navigation.php'
+		locate_template( 'assets/templates/navigation.php' )
 	);
-	
-	include( $include );
+
+	// load it if we find it
+	if ( $cp_navigation != '' ) load_template( $cp_navigation );
 
 	?>
 
